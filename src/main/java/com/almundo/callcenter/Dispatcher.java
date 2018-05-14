@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.PriorityBlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 /**
  * the class in charge of handle the calls
@@ -96,7 +97,7 @@ public class Dispatcher {
             Employee employee = employeesQueue.poll();
             System.out.println("Attending call for  " + call.getDuration() + " " +
                     Thread.currentThread() + " " + employee.getType().name());
-            Thread.sleep(call.getDuration());
+            TimeUnit.SECONDS.sleep(call.getDuration());
             employeesQueue.add(employee);
             attendedCalls.add(call);
         } catch (InterruptedException e) {

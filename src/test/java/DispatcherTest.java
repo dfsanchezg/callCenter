@@ -60,7 +60,7 @@ public class DispatcherTest {
         int numberOfCalls = 10;
         Dispatcher dispatcher =  new Dispatcher(numberOfCalls);
         dispatcher.attendCalls();
-        dispatcher.getExecutorService().awaitTermination(10*2, TimeUnit.SECONDS);
+        dispatcher.getExecutorService().awaitTermination(10, TimeUnit.SECONDS);
         assertTrue(dispatcher.getNumberAttendedCalls() == numberOfCalls);
     }
 
