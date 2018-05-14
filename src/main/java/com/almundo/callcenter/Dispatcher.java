@@ -93,7 +93,6 @@ public class Dispatcher {
     private void dispatchCall(Call call) {
 
         try {
-
             Employee employee = employeesQueue.poll();
             System.out.println("Attending call for  " + call.getDuration() + " " +
                     Thread.currentThread() + " " + employee.getType().name());
@@ -101,8 +100,7 @@ public class Dispatcher {
             employeesQueue.add(employee);
             attendedCalls.add(call);
         } catch (InterruptedException e) {
-
-            e.printStackTrace();
+            LOGGER.error("There was an error processing the call", e);
         }
     }
 }
