@@ -53,7 +53,7 @@ public class Dispatcher {
      */
     public void attendCalls(){
 
-        LOGGER.info("Start to process " + + callsToAttend.size() + " calls");
+        LOGGER.info("Start to process " + callsToAttend.size() + " calls");
         callsToAttend.forEach(call -> executorService.execute(() -> dispatchCall(call)));
         stop();
     }
