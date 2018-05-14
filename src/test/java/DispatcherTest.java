@@ -55,7 +55,7 @@ public class DispatcherTest {
      * @throws InterruptedException
      */
     @Test
-    public void Dispatch10CallsTest() throws InterruptedException{
+    public void DispatchTenCallsTest() throws InterruptedException{
 
         int numberOfCalls = 10;
         Dispatcher dispatcher =  new Dispatcher(numberOfCalls);
@@ -70,7 +70,7 @@ public class DispatcherTest {
      * @throws InterruptedException
      */
     @Test
-    public void Dispatch20CallsTest() throws InterruptedException{
+    public void DispatchTwentyCallsTest() throws InterruptedException{
 
         int numberOfCalls = 20;
         Dispatcher dispatcher =  new Dispatcher(numberOfCalls);
